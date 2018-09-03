@@ -1,0 +1,71 @@
+<mat-toolbar color="primary">
+  <link rel="shortcut icon" href="../../assets/logo.jpg" style="width:10px;height:10px;" type="image/x-icon"> {{title}}
+</mat-toolbar>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>New Task</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+
+    <form #entryForm="ngForm" (ngSubmit)="Process()">
+      <mat-form-field>
+        <input type="text" name="taskname" ngModel placeholder="Please Enter The Task" required matInput color="primary">
+      </mat-form-field>
+      <br>
+
+      <mat-radio-group name="radio" [(ngModel)]="priority">
+        Priority:
+        <mat-radio-button  value="low" >High</mat-radio-button>
+        <mat-radio-button value="medium">Medium</mat-radio-button>
+        <mat-radio-button value="gigh">Low</mat-radio-button>
+      </mat-radio-group>
+      <br>
+
+      <mat-form-field>
+        <input type="text" name="due" ngModel placeholder="Please Enter The Date" required matInput color="primary">
+      </mat-form-field>
+      <br>
+
+      <button type="submit" mat-raised-button color="accent">
+        <mat-icon>add</mat-icon>
+        <span>Add</span>
+      </button>
+
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Task</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-list role="list">
+            <mat-list-item role="listitem"> </mat-list-item>
+            <mat-list-item role="listitem"> </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+
+
+    </form>
+  </mat-card-content>
+
+</mat-card>
+
+<!--form>
+  <mat-form-field class="example-form">
+    Description:
+    <input type="text" name="description" ngModel placeholder="Text" required matInput color="primary"> <br>
+  </mat-form-field>
+
+  <mat-radio-group>
+    Priority:
+    <mat-radio-button name="priority" value="low" ngModel>High</mat-radio-button>
+    <mat-radio-button name="priority" value="medium" ngModel>Medium</mat-radio-button>
+    <mat-radio-button name="priority" value="gigh" ngModel>Low</mat-radio-button>
+  </mat-radio-group>
+
+  <mat-form-field class="example-form">
+      Due:
+      <input type="text" name="description" ngModel placeholder="Date" required matInput color="primary"> <br>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="accent">Add</button>
+</form>-->

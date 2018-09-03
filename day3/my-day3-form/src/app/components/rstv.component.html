@@ -1,0 +1,50 @@
+<mat-toolbar color="primary">{{title}}</mat-toolbar>
+
+<form class="form-control" #rstvForm="ngForm" (ngSubmit)=processRSTV(rstvForm)>
+
+  <mat-form-field class="example-form">
+    <input type="text" name="name" ngModel placeholder="Name" required matInput color="primary"> <br>
+  </mat-form-field>
+
+  <mat-form-field class="example-form">
+    <input type="tel" name="mobile" ngModel placeholder="Phone" matInput color="accent"><br>
+  </mat-form-field>
+
+  <mat-form-field class="example-form">
+    <textarea name="textarea" id="" cols="30" rows="10" placeholder="Text Here" ngModel matInput></textarea>
+  </mat-form-field>
+
+  <button type="submit" mat-raised-button color="accent">RSTV</button>
+  
+ <!--   <table>
+    <tr>
+      <td>Name</td>
+      <td> <input type="text" name="name" ngModel></td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td> <input type="tel" name="mobile" ngModel></td>
+    </tr>
+
+    <tr>
+      <td>Attending</td>
+      <td>
+        <input type="radio" name="attending" value="true" ngModel>Yes
+        <input type="radio" name="attending" value="false" ngModel>No
+      </td>
+    </tr>
+
+    <tr>
+      <td>Comments</td>
+      <td>
+        <textarea name="textarea" id="" cols="30" rows="10" ngModel></textarea>
+      </td>
+    </tr
+
+
+    <tr>
+      <td> <button type="submit" mat-raised-button color="accent">RSTV</button></td>
+    </tr>
+  </table>>-->
+
+</form>

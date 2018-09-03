@@ -1,0 +1,15 @@
+<h1>My Supermarket</h1>
+<table>
+  <tr>
+    <td width="50%">
+      <app-inventory (itemSelected)="newItem($event)"  [newInventory]="returnItem" >
+       
+      </app-inventory>
+      
+      
+    </td>
+    <td>
+        <app-cart [cart]="shoppingList" (itemDelected)="deleteItem($event)" ></app-cart>
+    </td>
+  </tr>
+</table>
