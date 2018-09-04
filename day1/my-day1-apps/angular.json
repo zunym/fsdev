@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-day1-app": {
+    "my-day1-apps": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-day1-app",
+            "outputPath": "dist/my-day1-apps",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "my-day1-app:build"
+            "browserTarget": "my-day1-apps:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "my-day1-app:build:production"
+              "browserTarget": "my-day1-apps:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-day1-app:build"
+            "browserTarget": "my-day1-apps:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "my-day1-app-e2e": {
+    "my-day1-apps-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "my-day1-app:serve"
+            "devServerTarget": "my-day1-apps:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "my-day1-app:serve:production"
+              "devServerTarget": "my-day1-apps:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "my-day1-app"
+  "defaultProject": "my-day1-apps"
 }
